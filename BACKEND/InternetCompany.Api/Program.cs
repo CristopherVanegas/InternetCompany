@@ -51,6 +51,16 @@ Console.WriteLine(
     InternetCompany.Infrastructure.Security.PasswordHasher.Hash("Admin123!")
 );
 ///////
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
@@ -62,6 +72,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowAngular");
 app.UseMiddleware<InternetCompany.Api.Middlewares.ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
