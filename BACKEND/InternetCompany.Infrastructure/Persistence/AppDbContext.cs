@@ -16,6 +16,10 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<User>().ToTable("Users");
+        modelBuilder.Entity<Role>().ToTable("Roles");
+        modelBuilder.Entity<UserStatus>().ToTable("UserStatus");
+
         modelBuilder.Entity<User>()
             .HasIndex(u => u.Username)
             .IsUnique();
