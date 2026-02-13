@@ -18,4 +18,9 @@ public class User
     public DateTime? UpdatedAt { get; set; }
 
     public bool IsDeleted { get; set; }
+
+    public bool IsApproved { get; set; }
+    public int? ApprovedByUserId { get; set; }
+    public DateTime? ApprovedAt { get; set; }
+
 }
