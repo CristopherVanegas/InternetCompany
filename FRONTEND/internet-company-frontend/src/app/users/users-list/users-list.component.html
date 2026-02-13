@@ -1,0 +1,11 @@
+<h2>Usuarios</h2>
+
+<div class="users-grid">
+  <div class="user-card" *ngFor="let user of users">
+    <h3>{{user.username}}</h3>
+    <p>Rol: {{user.role}}</p>
+    <span [class.approved]="user.isApproved">
+      {{ user.isApproved ? 'Aprobado' : 'Pendiente' }}
+    </span>
+  </div>
+</div>
