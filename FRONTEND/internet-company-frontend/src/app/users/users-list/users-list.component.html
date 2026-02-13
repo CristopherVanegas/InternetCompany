@@ -1,11 +1,33 @@
-<h2>Usuarios</h2>
+<h3 class="mb-4">Usuarios</h3>
 
-<div class="users-grid">
-  <div class="user-card" *ngFor="let user of users">
-    <h3>{{user.username}}</h3>
-    <p>Rol: {{user.role}}</p>
-    <span [class.approved]="user.isApproved">
-      {{ user.isApproved ? 'Aprobado' : 'Pendiente' }}
-    </span>
+<div class="card shadow">
+  <div class="card-body">
+
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Rol</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.role}}</td>
+          <td>
+            <span class="badge"
+                  [ngClass]="user.isApproved ? 'bg-success' : 'bg-warning text-dark'">
+              {{ user.isApproved ? 'Aprobado' : 'Pendiente' }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
   </div>
 </div>

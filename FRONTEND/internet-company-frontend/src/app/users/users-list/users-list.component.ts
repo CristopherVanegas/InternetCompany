@@ -6,13 +6,9 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-users-list',
   standalone: true,
-  imports: [CommonModule],   // 👈 AQUÍ
-  template: `
-    <h2>Usuarios</h2>
-    <div *ngFor="let user of users">
-      {{user.username}} - {{user.role}}
-    </div>
-  `
+  imports: [CommonModule],
+  templateUrl: './users-list.component.html',
+  styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent {
 
@@ -20,6 +16,9 @@ export class UsersListComponent {
 
   constructor(private http: HttpClient) {
     this.http.get<any[]>(`${environment.apiUrl}/users`)
-      .subscribe(data => this.users = data);
+      .subscribe(data => {
+        console.log(data);
+        this.users = data;
+      });
   }
 }

@@ -1,15 +1,36 @@
-<div class="login-card">
-  <h2>Login</h2>
+<div class="row justify-content-center">
+  <div class="col-md-4">
 
-  <input type="text"
-         placeholder="Username"
-         [(ngModel)]="username">
+    <div class="card shadow">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-4">Login</h4>
 
-  <input type="password"
-         placeholder="Password"
-         [(ngModel)]="password">
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Username"
+                 [(ngModel)]="username">
+        </div>
 
-  <button (click)="login()">Login</button>
+        <div class="mb-3">
+          <input type="password"
+                 class="form-control"
+                 placeholder="Password"
+                 [(ngModel)]="password">
+        </div>
 
-  <p class="error" *ngIf="error">{{error}}</p>
+        <button class="btn btn-primary w-100"
+                (click)="login()">
+          Login
+        </button>
+
+        <div *ngIf="error"
+             class="alert alert-danger mt-3">
+          {{error}}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </div>
