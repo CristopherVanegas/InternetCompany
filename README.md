@@ -5,6 +5,7 @@
 ---
 
 ## 🇪🇸 Español
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/097f1af6-227e-4d76-9384-756b29c191e6" />
 
 InternetCompany es una aplicación empresarial full-stack construida alrededor de la autenticación y la administración de usuarios. El repositorio está dividido en un backend con .NET 8, un frontend con Angular 20 y scripts SQL para la configuración de la base de datos y la carga de datos iniciales.
 
@@ -335,6 +336,7 @@ El repositorio ya contiene la estructura para la gestión de menús y permisos p
 ---
 
 ## 🇬🇧 English
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/097f1af6-227e-4d76-9384-756b29c191e6" />
 
 InternetCompany is a full-stack business application built around authentication and user administration. The repository is split into a .NET 8 backend, an Angular 20 frontend, and SQL scripts for database setup and seed data.
 
