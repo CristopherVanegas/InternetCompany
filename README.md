@@ -2,7 +2,7 @@
 
 [🇪🇸 Español](#-español) | [🇬🇧 English](#-english)
 
----
+--- 
 
 ## 🇪🇸 Español
 <img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/097f1af6-227e-4d76-9384-756b29c191e6" />
